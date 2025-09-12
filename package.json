@@ -1,0 +1,16 @@
+{
+  "name": "attendance-system-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "Harshdeep Chandrakar",
+  "license": "ISC",
+  "description": "A backend for attendance system",
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
