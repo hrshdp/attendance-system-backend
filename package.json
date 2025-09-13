@@ -4,13 +4,19 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/app.js"
   },
   "keywords": [],
   "author": "Harshdeep Chandrakar",
   "license": "ISC",
   "description": "A backend for attendance system",
   "devDependencies": {
+    "nodemon": "^3.1.10",
     "prettier": "^3.6.2"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.5"
   }
 }
