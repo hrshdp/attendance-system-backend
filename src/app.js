@@ -4,6 +4,15 @@ import pool from "./db/connection.js";
 const app = express();
 app.use(express.json());
 
+
+// routes
+
+import userRouter from "./routes/user.routes.js";
+
+
+//routes declaration
+app.use("/api/v1/users", userRouter)
+
 app.get("/health", async (req, res) => {
     try {
         const [rows] = await pool.query("SELECT 1 + 1 AS result");
