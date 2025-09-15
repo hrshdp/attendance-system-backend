@@ -3,10 +3,10 @@ import { createUserService, getUsersService } from "../services/user.service.js"
 //create a new user
 
 const createUser = async (req, res) => {
-    const { name, email, password, role } = req.body;
+    const { name, email, phone_number, password, role } = req.body;
 
     try {
-        const userId = await createUserService({ name, email, password, role });
+        const userId = await createUserService({ name, email, phone_number, password, role });
         res.status(201).json({message: "User created", userId});
     } catch (err) {
         res.status(500).json({ error: err.message });
