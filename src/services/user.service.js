@@ -16,7 +16,7 @@ const createUserService = async ({ name, email, phone_number, password, role }) 
 
     const [result] = await pool.query(
         "INSERT INTO users (name, email, phone_number, password, role) Values (?, ?, ?, ?)",
-        [name, email, phone_number, hashedPassword, role || "student"]
+        [name, email,phone_number, hashedPassword, role || "student"]
     );
 
     return result.insertId;
@@ -26,7 +26,7 @@ const createUserService = async ({ name, email, phone_number, password, role }) 
 
 const getUsersService = async () => {
     const [rows] = await pool.query(
-        "SELECT id, name, email, phone_number, role, created_at FROM users"
+        "SELECT id, name, email, role, created_at FROM users"
     );
     return rows;
 };
