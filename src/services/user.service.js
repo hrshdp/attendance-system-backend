@@ -15,7 +15,7 @@ const createUserService = async ({ name, email, phone_number, password, role }) 
     const hashedPassword = await bcrypt.hash(password, 10);
 
     const [result] = await pool.query(
-        "INSERT INTO users (name, email, phone_number, password, role) Values (?, ?, ?, ?)",
+        "INSERT INTO users (name, email, phone_number, password, role) Values (?, ?, ?, ?, ?)",
         [name, email,phone_number, hashedPassword, role || "student"]
     );
 
